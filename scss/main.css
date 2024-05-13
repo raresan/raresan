@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +11,7 @@
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.3)), url(../images/renan-bugado.jpg) center top;
+  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
   background-size: cover;
 }
 .home__name {
@@ -20,7 +21,7 @@
   border-bottom: 2px solid #fff;
 }
 .home__name--last {
-  color: #ff652f;
+  color: #939eeb;
   font-weight: 700;
 }
 
@@ -108,7 +109,7 @@
   transform: translateX(0);
 }
 .nav .menu-nav__item.active > a {
-  color: #ff652f;
+  color: #939eeb;
 }
 .nav .menu-nav__link {
   display: inline-block;
@@ -119,7 +120,7 @@
   transition: all 0.5s ease-in-out;
 }
 .nav .menu-nav__link:hover {
-  color: #ff652f;
+  color: #939eeb;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -144,7 +145,7 @@
 .about__bio-image {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.3)), url(../images/renan-bugado.jpg) center top;
+  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -171,7 +172,7 @@
 .about .jobs__job {
   background: #424242;
   padding: 0.5rem;
-  border-bottom: 5px solid #ff652f;
+  border-bottom: 5px solid #939eeb;
 }
 .about .jobs__job h2,
 .about .jobs__job h3 {
@@ -194,7 +195,7 @@
 .projects__bio-image {
   height: 30vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.3)), url(../images/renan-bugado.jpg) center top;
+  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -214,7 +215,7 @@
 }
 .projects__item {
   position: relative;
-  border-bottom: 5px solid #ff652f;
+  border-bottom: 5px solid #939eeb;
   overflow: hidden;
   cursor: pointer;
 }
@@ -228,7 +229,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: #ff652f;
+  background: #939eeb;
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -273,7 +274,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.3)), url(../images/renan-bugado.jpg) center top;
+  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
   background-size: cover;
 }
 .contact h2 {
@@ -345,7 +346,7 @@ body {
   background: #282828;
   color: #fff;
   height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Reddit Sans", sans-serif;
   line-height: 1;
 }
 
@@ -361,7 +362,7 @@ a {
 }
 
 .text-secondary {
-  color: #ff652f;
+  color: #939eeb;
 }
 
 header {
@@ -385,7 +386,7 @@ main .social-icons a {
   transition: all 0.5s ease-in-out;
 }
 main .social-icons a:hover {
-  color: #ff652f;
+  color: #939eeb;
 }
 
 footer {

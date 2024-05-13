@@ -1,10 +1,19 @@
 $primary-color: #282828;
-$secondary-color: #ff652f;
+$secondary-color: #939eeb;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+@mixin background-image {
+  background: linear-gradient(
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.7)
+    ),
+    url(../images/renan-bg01.jpg) center top;
+  background-size: cover;
 }
 
 @mixin transition-ease {
@@ -24,11 +33,13 @@ $secondary-color: #ff652f;
     @content;
   }
 }
+
 @mixin media-large {
   @media screen and (min-width: 1024px) {
     @content;
   }
 }
+
 @mixin media-extra-large {
   @media screen and (min-width: 1600px) {
     @content;
