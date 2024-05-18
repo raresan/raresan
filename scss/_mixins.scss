@@ -1,12 +1,3 @@
-$primary-color: #282828;
-$secondary-color: #939eeb;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 @mixin background-image {
   background: linear-gradient(
       rgba($primary-color, 0.9),
@@ -16,8 +7,9 @@ $secondary-color: #939eeb;
   background-size: cover;
 }
 
-@mixin transition-ease {
-  transition: all 0.5s ease-in-out;
+@mixin transition-ease($props: all) {
+  transition: 0.5s ease-in-out;
+  transition-property: #{$props};
 }
 
 @function set-text-color($color) {

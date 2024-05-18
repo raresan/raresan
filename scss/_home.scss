@@ -1,20 +1,21 @@
 .home {
+  @include background-image;
+
   height: 100%;
   padding-top: 40vh;
   overflow: hidden;
   align-items: center;
   text-align: center;
-  @include background-image;
+}
 
-  &__name {
-    font-size: 5rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid set-text-color($primary-color);
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid set-text-color($primary-color);
+}
 
-    &--last {
-      color: $secondary-color;
-      font-weight: 700;
-    }
-  }
+.home__name--last {
+  color: $secondary-color;
+  font-weight: 700;
 }

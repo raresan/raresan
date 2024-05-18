@@ -5,24 +5,64 @@
   padding: 0;
 }
 
-.home {
+body {
+  background: #282828;
+  color: #fff;
+  height: 100vh;
+  font-family: "Reddit Sans", sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
   height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
-  background-size: cover;
+  width: 100%;
 }
-.home__name {
-  font-size: 5rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #fff;
+
+.footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #fff;
 }
-.home__name--last {
+
+.text-secondary {
   color: #939eeb;
-  font-weight: 700;
+}
+
+.social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.social-icons__link {
+  transition: 0.5s ease-in-out;
+  transition-property: all;
+  padding: 0.4rem;
+}
+.social-icons__link:hover {
+  color: #939eeb;
+}
+
+.menu {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
 }
 
 .menu-button {
@@ -33,34 +73,42 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  .menu-button {
+    visibility: hidden;
+  }
+}
+
 .menu-button__burger {
+  transition: 0.5s ease-in-out;
+  transition-property: transform, background;
   position: absolute;
   right: 0;
   top: 0.5rem;
   width: 28px;
   height: 3px;
   background: #fff;
-  transition: all 0.5s ease-in-out;
 }
 .menu-button__burger::before {
+  transition: 0.5s ease-in-out;
+  transition-property: transform;
   content: "";
   position: absolute;
   top: -8px;
   width: 28px;
   height: 3px;
   background: #fff;
-  transition: all 0.5s ease-in-out;
 }
 .menu-button__burger::after {
+  transition: 0.5s ease-in-out;
+  transition-property: transform, width;
   content: "";
   position: absolute;
   top: 8px;
   width: 20px;
   height: 3px;
   background: #fff;
-  transition: all 0.5s ease-in-out;
 }
 .menu-button__burger.open {
   transform: rotate(720deg);
@@ -82,10 +130,18 @@
   opacity: 0.98;
   visibility: hidden;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    visibility: visible;
+  }
+}
 .nav.open {
   visibility: visible;
 }
-.nav .menu-nav {
+
+.menu-nav {
+  transition: 0.5s ease-in-out;
+  transition-property: all;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -96,116 +152,185 @@
   list-style-type: none;
   padding-right: 1rem;
   transform: translateY(-100%);
-  transition: all 0.5s ease-in-out;
 }
-.nav .menu-nav.open {
+@media screen and (min-width: 768px) {
+  .menu-nav {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+}
+.menu-nav.open {
   transform: translateY(0);
 }
-.nav .menu-nav__item {
+
+.menu-nav__item {
+  transition: 0.5s ease-in-out;
+  transition-property: transform;
   transform: translateX(100vw);
-  transition: all 0.5s ease-in-out;
 }
-.nav .menu-nav__item.open {
+@media screen and (min-width: 768px) {
+  .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+}
+.menu-nav__item.open {
   transform: translateX(0);
 }
-.nav .menu-nav__item.active > a {
-  color: #939eeb;
+.menu-nav__item:nth-child(1) {
+  transition-delay: 0.25s;
 }
-.nav .menu-nav__link {
+.menu-nav__item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+.menu-nav__item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+.menu-nav__item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.menu-nav__link {
+  transition: 0.5s ease-in-out;
+  transition-property: color;
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem 0;
   font-weight: 300;
-  transition: all 0.5s ease-in-out;
 }
-.nav .menu-nav__link:hover {
+@media screen and (min-width: 768px) {
+  .menu-nav__link {
+    font-size: 1.5rem;
+  }
+}
+.menu-nav__link:hover {
+  color: #939eeb;
+}
+.menu-nav__item.active .menu-nav__link {
   color: #939eeb;
 }
 
-.menu-nav__item:nth-child(1) {
-  transition-delay: 0.25s;
+.home {
+  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
+  background-size: cover;
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
 }
 
-.menu-nav__item:nth-child(2) {
-  transition-delay: 0.35s;
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
 }
 
-.menu-nav__item:nth-child(3) {
-  transition-delay: 0.45s;
-}
-
-.menu-nav__item:nth-child(4) {
-  transition-delay: 0.55s;
+.home__name--last {
+  color: #939eeb;
+  font-weight: 700;
 }
 
 .about {
   padding-bottom: 2rem;
 }
+.about .footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
 .about__bio-image {
-  height: 50vh;
-  width: 100%;
   background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
   background-size: cover;
+  height: 50vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
-.about__bio-image p {
+
+.about__bio-text {
   margin-bottom: 2rem;
 }
+
 .about__bio {
   width: 80%;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .about__bio {
+    font-size: 1.5rem;
+  }
+}
 .about__bio .text-secondary {
   padding-bottom: 1rem;
 }
-.about .jobs {
+
+.jobs {
   width: 60vw;
   margin: 2rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
 }
-.about .jobs__job {
+
+.jobs__job {
   background: #424242;
   padding: 0.5rem;
   border-bottom: 5px solid #939eeb;
 }
-.about .jobs__job h2,
-.about .jobs__job h3 {
+
+.jobs__duration,
+.jobs__company {
   margin: 0.5rem 0;
 }
-.about .jobs__job h6 {
+
+.jobs__role {
   margin: 0.3rem 0;
-}
-.about .social-icons {
-  display: flex;
-  flex-direction: column;
-}
-.about footer {
-  transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 .projects {
   padding-bottom: 2rem;
 }
+.projects .footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
 .projects__bio-image {
-  height: 30vh;
-  width: 100%;
   background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
   background-size: cover;
+  height: 30vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
+@media screen and (min-width: 768px) {
+  .projects__bio-image {
+    height: 40vh;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .projects__bio-image {
+    height: 50vh;
+  }
+}
 .projects__bio-image .text-secondary {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .projects__bio-image .text-secondary {
+    font-size: 3rem;
+  }
+}
+
 .projects__items {
   width: 60vw;
   margin: 2rem auto 0 auto;
@@ -213,16 +338,26 @@
   grid-template-columns: 1fr;
   grid-gap: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .projects__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .projects__item {
   position: relative;
   border-bottom: 5px solid #939eeb;
   overflow: hidden;
   cursor: pointer;
 }
-.projects__item img {
-  width: 100%;
-}
 .projects__item::after {
+  transition: 0.5s ease-in-out;
+  transition-property: top, opacity;
   content: "";
   position: absolute;
   top: 100%;
@@ -231,15 +366,16 @@
   width: 100%;
   background: #939eeb;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
 }
 .projects__item:hover::after {
   top: 0;
   opacity: 0.9;
 }
-.projects__item:hover .projects__button {
-  opacity: 1;
+
+.projects__image {
+  width: 100%;
 }
+
 .projects__buttons {
   position: absolute;
   top: 0;
@@ -251,150 +387,53 @@
   align-items: center;
   text-align: center;
 }
+
 .projects__button {
+  transition: 0.5s ease-in-out;
+  transition-property: color, opacity;
   opacity: 0;
   color: #000;
-  transition: all 0.5s ease-in-out;
 }
 .projects__button:hover {
   color: #fff;
 }
-.projects .social-icons {
-  display: flex;
-  flex-direction: column;
-}
-.projects footer {
-  transform: rotate(90deg) translate(-3rem, -5rem);
+.projects__item:hover .projects__button {
+  opacity: 1;
 }
 
 .contact {
+  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
+  background-size: cover;
   height: 100%;
   padding-top: 40vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
-  background-size: cover;
-}
-.contact h2 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-.contact__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  font-size: 1.5rem;
 }
 .contact .social-icons {
   position: initial;
   margin-top: 2rem;
 }
 
+.contact__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contact__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 768px) {
-  .menu-button {
-    visibility: hidden;
-  }
-  .nav {
-    visibility: visible;
-  }
-  .nav .menu-nav {
-    display: block;
-    transform: translateY(0);
-    height: 100%;
-    background: transparent;
-    text-align: right;
-  }
-  .nav .menu-nav__item {
-    display: inline;
-    padding-right: 1.5rem;
-  }
-  .nav .menu-nav__link {
-    font-size: 1.5rem;
-  }
-  .about__bio {
-    font-size: 1.5rem;
-  }
-  .projects__bio-image {
-    height: 40vh;
-  }
-  .projects__items {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .projects .text-secondary {
-    font-size: 3rem;
-  }
   .contact__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1024px) {
-  .projects__items {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .contact__list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media screen and (min-width: 1600px) {
-  .projects__bio-image {
-    height: 50vh;
-  }
-}
-body {
-  background: #282828;
-  color: #fff;
-  height: 100vh;
-  font-family: "Reddit Sans", sans-serif;
-  line-height: 1;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 400;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.text-secondary {
-  color: #939eeb;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  padding: 1rem;
-}
-
-main {
-  height: 100%;
-  width: 100%;
-}
-main .social-icons {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-}
-main .social-icons a {
-  padding: 0.4rem;
-  transition: all 0.5s ease-in-out;
-}
-main .social-icons a:hover {
-  color: #939eeb;
-}
-
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: #fff;
 }/*# sourceMappingURL=main.css.map */

@@ -1,59 +1,58 @@
 .about {
   padding-bottom: 2rem;
 
-  &__bio-image {
-    height: 50vh;
-    width: 100%;
-    @include background-image;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
-    p {
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__bio {
-    width: 80%;
-    text-align: center;
-
-    .text-secondary {
-      padding-bottom: 1rem;
-    }
-  }
-
-  .jobs {
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-
-    &__job {
-      background: lighten($primary-color, 10%);
-      padding: 0.5rem;
-      border-bottom: 5px solid $secondary-color;
-
-      h2,
-      h3 {
-        margin: 0.5rem 0;
-      }
-
-      h6 {
-        margin: 0.3rem 0;
-      }
-    }
-  }
-
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-  }
-
-  footer {
+  .footer {
     transform: rotate(90deg) translate(-3rem, -5rem);
   }
+}
+
+.about__bio-image {
+  @include background-image;
+
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.about__bio-text {
+  margin-bottom: 2rem;
+}
+
+.about__bio {
+  width: 80%;
+  text-align: center;
+
+  @include media-medium {
+    font-size: 1.5rem;
+  }
+
+  .text-secondary {
+    padding-bottom: 1rem;
+  }
+}
+
+.jobs {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.jobs__job {
+  background: lighten($primary-color, 10%);
+  padding: 0.5rem;
+  border-bottom: 5px solid $secondary-color;
+}
+
+.jobs__duration,
+.jobs__company {
+  margin: 0.5rem 0;
+}
+
+.jobs__role {
+  margin: 0.3rem 0;
 }

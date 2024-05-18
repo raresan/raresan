@@ -1,3 +1,10 @@
+.menu {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
 .menu-button {
   position: absolute;
   z-index: 1;
@@ -6,49 +13,55 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  @include transition-ease;
 
-  &__burger {
+  @include media-medium {
+    visibility: hidden;
+  }
+}
+
+.menu-button__burger {
+  @include transition-ease('transform, background');
+
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: set-text-color($primary-color);
+
+  &::before {
+    @include transition-ease(transform);
+
+    content: '';
     position: absolute;
-    right: 0;
-    top: 0.5rem;
+    top: -8px;
     width: 28px;
     height: 3px;
     background: set-text-color($primary-color);
-    @include transition-ease;
+  }
+
+  &::after {
+    @include transition-ease('transform, width');
+
+    content: '';
+    position: absolute;
+    top: 8px;
+    width: 20px;
+    height: 3px;
+    background: set-text-color($primary-color);
+  }
+
+  &.open {
+    transform: rotate(720deg);
+    background: transparent;
 
     &::before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      width: 28px;
-      height: 3px;
-      background: set-text-color($primary-color);
-      @include transition-ease;
+      transform: rotate(45deg) translate(5px, 8px);
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      top: 8px;
-      width: 20px;
-      height: 3px;
-      background: set-text-color($primary-color);
-      @include transition-ease;
-    }
-
-    &.open {
-      transform: rotate(720deg);
-      background: transparent;
-
-      &::before {
-        transform: rotate(45deg) translate(5px, 8px);
-      }
-
-      &::after {
-        width: 28px;
-        transform: rotate(-45deg) translate(3px, -7px);
-      }
+      width: 28px;
+      transform: rotate(-45deg) translate(3px, -7px);
     }
   }
 }
@@ -61,57 +74,81 @@
   opacity: 0.98;
   visibility: hidden;
 
-  &.open {
+  @include media-medium {
     visibility: visible;
   }
 
-  .menu-nav {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    background: $primary-color;
-    list-style-type: none;
-    padding-right: 1rem;
-    transform: translateY(-100%);
-    @include transition-ease;
+  &.open {
+    visibility: visible;
+  }
+}
 
-    &.open {
-      transform: translateY(0);
-    }
+.menu-nav {
+  @include transition-ease;
 
-    &__item {
-      transform: translateX(100vw);
-      @include transition-ease;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: $primary-color;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateY(-100%);
 
-      &.open {
-        transform: translateX(0);
-      }
+  @include media-medium {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
 
-      &.active > a {
-        color: $secondary-color;
-      }
-    }
+  &.open {
+    transform: translateY(0);
+  }
+}
 
-    &__link {
-      display: inline-block;
-      font-size: 2rem;
-      text-transform: uppercase;
-      padding: 2rem 0;
-      font-weight: 300;
-      @include transition-ease;
+.menu-nav__item {
+  @include transition-ease(transform);
 
-      &:hover {
-        color: $secondary-color;
-      }
+  transform: translateX(100vw);
+
+  @include media-medium {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.15s;
     }
   }
 }
 
-@for $i from 1 through 4 {
-  .menu-nav__item:nth-child(#{$i}) {
-    transition-delay: ($i * 0.1s) + 0.15s;
+.menu-nav__link {
+  @include transition-ease(color);
+
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+
+  @include media-medium {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  .menu-nav__item.active & {
+    color: $secondary-color;
   }
 }
