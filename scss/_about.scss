@@ -1,58 +1,67 @@
 .about {
-  padding-bottom: 2rem;
+  padding: 8rem 0 5rem;
 
-  .footer {
-    transform: rotate(90deg) translate(-3rem, -5rem);
+  @include media-medium {
+    padding-top: 12rem;
   }
-}
-
-.about__bio-image {
-  @include background-image;
-
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .about__bio-text {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .about__bio {
-  width: 80%;
-  text-align: center;
+  width: 66vw;
+  margin: 0 auto;
 
   @include media-medium {
     font-size: 1.5rem;
-  }
-
-  .text-secondary {
-    padding-bottom: 1rem;
+    width: 60vw;
   }
 }
 
+.about__title {
+  @include title;
+}
+
 .jobs {
-  width: 60vw;
-  margin: 2rem auto 0 auto;
+  margin: 5rem auto 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
+  width: 66vw;
+
+  @include media-medium {
+    width: 60vw;
+  }
 }
 
 .jobs__job {
   background: lighten($primary-color, 10%);
-  padding: 0.5rem;
+  padding: 2rem 1.5rem;
   border-bottom: 5px solid $secondary-color;
+
+  @include media-medium {
+    padding: 2.5rem 3rem;
+  }
 }
 
-.jobs__duration,
+.jobs__duration {
+  color: $secondary-color;
+  font-size: 1.8rem;
+}
+
+.jobs__company,
+.jobs__role,
+.jobs__description {
+  margin-top: 0.5rem;
+}
+
 .jobs__company {
-  margin: 0.5rem 0;
+  font-size: 1.4rem;
 }
 
-.jobs__role {
-  margin: 0.3rem 0;
+.jobs__role,
+.jobs__description {
+  @include text;
 }

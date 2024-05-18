@@ -1,60 +1,43 @@
 .projects {
-  padding-bottom: 2rem;
+  padding: 8rem 0 5rem;
 
-  .footer {
-    transform: rotate(90deg) translate(-3rem, -5rem);
+  @include media-medium {
+    padding-top: 12rem;
   }
 }
 
-.projects__bio-image {
-  @include background-image;
+.projects__title {
+  @include title;
 
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  width: 66vw;
+  margin: 0 auto;
 
   @include media-medium {
-    height: 40vh;
-  }
-
-  @include media-extra-large {
-    height: 50vh;
-  }
-
-  .text-secondary {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-
-    @include media-medium {
-      font-size: 3rem;
-    }
+    width: 60vw;
   }
 }
 
 .projects__items {
-  width: 60vw;
-  margin: 2rem auto 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  width: 66vw;
+  margin: 5rem auto 0;
 
   @include media-medium {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include media-large {
-    grid-template-columns: repeat(3, 1fr);
+    width: 60vw;
   }
 }
 
 .projects__item {
   position: relative;
-  border-bottom: 5px solid $secondary-color;
   overflow: hidden;
-  cursor: pointer;
+  font-size: 0;
+
+  @include media-medium {
+    border-bottom: 5px solid $secondary-color;
+  }
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
 
   &::after {
     @include transition-ease('top, opacity');
@@ -69,10 +52,12 @@
     opacity: 0;
   }
 
-  &:hover {
-    &::after {
-      top: 0;
-      opacity: 0.9;
+  @include is-hoverable {
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
+      }
     }
   }
 }
@@ -81,29 +66,96 @@
   width: 100%;
 }
 
+.projects__content {
+  @include transition-ease(opacity);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: set-text-color(set-text-color($secondary-color));
+  margin-top: 1rem;
+
+  @include media-medium {
+    color: set-text-color($secondary-color);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    align-items: center;
+    text-align: center;
+    margin-top: initial;
+
+    @include is-hoverable {
+      .projects__item:hover & {
+        opacity: 1;
+      }
+    }
+  }
+
+  .projects__item:not(:last-child) & {
+    padding-bottom: 3rem;
+    border-bottom: 2px solid set-text-color($primary-color);
+
+    @include media-medium {
+      padding-bottom: initial;
+      border-bottom: initial;
+    }
+  }
+}
+
+.projects__project-title {
+  color: $secondary-color;
+  font-size: 1.8rem;
+
+  @include media-medium {
+    color: $primary-color;
+  }
+}
+
+.projects__description {
+  @include text;
+
+  margin-top: 0.5rem;
+
+  @include media-medium {
+    width: 60%;
+  }
+}
+
 .projects__buttons {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  text-align: center;
+  margin-top: 1rem;
+
+  @include media-medium {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 8rem;
+    margin-top: 3rem;
+  }
 }
 
 .projects__button {
-  @include transition-ease('color, opacity');
+  @include transition-ease(color);
 
-  opacity: 0;
-  color: set-text-color($secondary-color);
+  color: set-text-color(set-text-color($secondary-color));
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 100%;
 
-  &:hover {
-    color: set-text-color(set-text-color($secondary-color));
+  @include media-medium {
+    font-size: 1.8rem;
+    color: set-text-color($secondary-color);
+    width: auto;
   }
 
-  .projects__item:hover & {
-    opacity: 1;
+  @include is-hoverable {
+    &:hover {
+      color: set-text-color(set-text-color($secondary-color));
+    }
   }
 }

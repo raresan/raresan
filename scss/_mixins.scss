@@ -37,3 +37,25 @@
     @content;
   }
 }
+
+@mixin is-hoverable {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+@mixin title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  color: $secondary-color;
+
+  @include media-medium {
+    font-size: 6rem;
+  }
+}
+
+@mixin text {
+  font-size: 1.1rem;
+}
