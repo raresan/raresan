@@ -394,7 +394,7 @@ a {
   position: relative;
   font-size: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
   .projects__item {
     border-bottom: 5px solid #939eeb;
     overflow: hidden;
@@ -403,7 +403,7 @@ a {
 .projects__item:not(:first-child) {
   margin-top: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
   .projects__item::after {
     transition: 0.3s ease-in-out;
     transition-property: top, opacity;
@@ -439,7 +439,7 @@ a {
   color: #fff;
   margin-top: 1rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
   .projects__content {
     color: #000;
     position: absolute;
@@ -453,7 +453,7 @@ a {
     margin-top: initial;
   }
 }
-@media screen and (min-width: 768px) and (any-hover: hover) {
+@media screen and (min-width: 1600px) and (any-hover: hover) {
   .projects__item:hover .projects__content {
     opacity: 1;
   }
@@ -462,7 +462,7 @@ a {
   padding-bottom: 3rem;
   border-bottom: 2px solid #fff;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
   .projects__item:not(:last-child) .projects__content {
     padding-bottom: initial;
     border-bottom: initial;
@@ -473,7 +473,7 @@ a {
   color: #939eeb;
   font-size: 1.8rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1600px) {
   .projects__project-title {
     color: #000;
   }
@@ -502,7 +502,11 @@ a {
 }
 @media screen and (min-width: 768px) {
   .projects__button {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .projects__button {
     color: #000;
   }
 }
