@@ -28,11 +28,11 @@
 
 .projects__item {
   position: relative;
-  overflow: hidden;
   font-size: 0;
 
   @include media-medium {
     border-bottom: 5px solid $secondary-color;
+    overflow: hidden;
   }
 
   &:not(:first-child) {
@@ -72,6 +72,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2rem;
   justify-content: center;
   color: set-text-color(set-text-color($secondary-color));
   margin-top: 1rem;
@@ -85,8 +86,7 @@
     left: 0;
     z-index: 1;
     opacity: 0;
-    align-items: center;
-    text-align: center;
+    padding: 0 5rem;
     margin-top: initial;
 
     @include is-hoverable {
@@ -112,45 +112,36 @@
   font-size: 1.8rem;
 
   @include media-medium {
-    color: $primary-color;
+    color: set-text-color($secondary-color);
   }
 }
 
 .projects__description {
   @include text;
 
-  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  list-style-type: square;
 
-  @include media-medium {
-    width: 60%;
+  li:not(:first-child) {
+    margin-top: 0.5rem;
   }
 }
 
 .projects__buttons {
-  margin-top: 1rem;
-
-  @include media-medium {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    text-align: center;
-    gap: 8rem;
-    margin-top: 3rem;
-  }
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .projects__button {
+  @include text;
   @include transition-ease(color);
 
-  color: set-text-color(set-text-color($secondary-color));
-  display: inline-block;
-  font-size: 1.4rem;
-  width: 100%;
+  color: $secondary-color;
 
   @include media-medium {
     font-size: 1.8rem;
     color: set-text-color($secondary-color);
-    width: auto;
   }
 
   @include is-hoverable {
