@@ -16,6 +16,7 @@ function toggleMenu() {
     nav.classList.add('open')
     menuNav.classList.add('open')
     navItems.forEach((item) => item.classList.add('open'))
+    document.documentElement.style.overflow = 'hidden'
 
     showMenu = true
   } else {
@@ -23,6 +24,7 @@ function toggleMenu() {
     nav.classList.remove('open')
     menuNav.classList.remove('open')
     navItems.forEach((item) => item.classList.remove('open'))
+    document.documentElement.style.overflow = 'auto'
 
     showMenu = false
   }
