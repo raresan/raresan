@@ -401,17 +401,19 @@ a {
 .projects__item:not(:first-child) {
   margin-top: 3rem;
 }
-.projects__item::after {
-  transition: 0.5s ease-in-out;
-  transition-property: top, opacity;
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #939eeb;
-  opacity: 0;
+@media screen and (min-width: 768px) {
+  .projects__item::after {
+    transition: 0.5s ease-in-out;
+    transition-property: top, opacity;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #939eeb;
+    opacity: 0;
+  }
 }
 @media (any-hover: hover) {
   .projects__item:hover::after {

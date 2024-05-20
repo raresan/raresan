@@ -40,16 +40,18 @@
   }
 
   &::after {
-    @include transition-ease('top, opacity');
+    @include media-medium {
+      @include transition-ease('top, opacity');
 
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: $secondary-color;
-    opacity: 0;
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary-color;
+      opacity: 0;
+    }
   }
 
   @include is-hoverable {
