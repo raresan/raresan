@@ -78,7 +78,7 @@
               <h2 class="projects__project-title">Bruno Henrique Portfolio</h2>
 
               <ul class="projects__description">
-                <li>Used NextJs, React with TypeScript and SASS.</li>
+                <li>Used Next.js, React with TypeScript and SASS.</li>
                 <li>Applied Sanity CMS.</li>
                 <li>Full responsive (Mobile First).</li>
                 <li>Website Design based on an existing template.</li>
@@ -229,7 +229,12 @@
         </div>
 
         <footer class="footer footer--rotate">
-          <span class="footer__copyright">&copy; Copyright 2024</span>
+          <span class="footer__copyright"
+            >&copy; Copyright
+            <script>
+              document.write(new Date().getFullYear())
+            </script></span
+          >
 
           <div class="social-icons">
             <a
