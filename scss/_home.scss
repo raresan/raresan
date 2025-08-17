@@ -7,20 +7,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8rem 1rem 0;
   text-align: center;
-  padding-top: 4rem;
+
+  @include media-medium {
+    padding: 4rem 0 0 45vw;
+    text-align: left;
+    align-items: initial;
+  }
 }
 
 .home__name {
   line-height: 1;
-  font-size: 5rem;
-  padding: 1rem 0 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid set-text-color($primary-color);
-  width: 100%;
+  font-size: 2.4rem;
+
+  @include media-medium {
+    font-size: 4rem;
+  }
 }
 
 .home__name--last {
   color: $secondary-color;
   font-weight: 700;
+}
+
+.home__role {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+
+  @include media-medium {
+    font-size: initial;
+  }
 }

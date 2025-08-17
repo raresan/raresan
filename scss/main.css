@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #282828;
+  background: black;
   color: #fff;
   height: 100dvh;
   font-family: "Poppins", sans-serif;
@@ -244,7 +244,7 @@ a {
 }
 
 .home {
-  background: linear-gradient(rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7)), url(../images/renan-bg01.jpg) center top;
+  background: url(../images/renan-bg02.png) 177% top;
   background-size: cover;
   height: 100%;
   overflow: hidden;
@@ -252,22 +252,45 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8rem 1rem 0;
   text-align: center;
-  padding-top: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .home {
+    background-position: center top;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home {
+    padding: 4rem 0 0 45vw;
+    text-align: left;
+    align-items: initial;
+  }
 }
 
 .home__name {
   line-height: 1;
-  font-size: 5rem;
-  padding: 1rem 0 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #fff;
-  width: 100%;
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .home__name {
+    font-size: 4rem;
+  }
 }
 
 .home__name--last {
   color: #939eeb;
   font-weight: 700;
+}
+
+.home__role {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .home__role {
+    font-size: initial;
+  }
 }
 
 .about {
@@ -321,7 +344,7 @@ a {
 }
 
 .jobs__job {
-  background: #424242;
+  background: #282828;
   padding: 2rem 1.5rem;
   border-bottom: 5px solid #939eeb;
 }

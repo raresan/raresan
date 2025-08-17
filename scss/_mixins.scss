@@ -1,12 +1,3 @@
-@mixin background-image {
-  background: linear-gradient(
-      rgba($primary-color, 0.9),
-      rgba($primary-color, 0.7)
-    ),
-    url(../images/renan-bg01.jpg) center top;
-  background-size: cover;
-}
-
 @mixin transition-ease($props: all) {
   transition: 0.3s ease-in-out;
   transition-property: #{$props};
@@ -23,6 +14,15 @@
 @mixin media-medium {
   @media screen and (min-width: 768px) {
     @content;
+  }
+}
+
+@mixin background-image {
+  background: url(../images/renan-bg02.png) 177% top;
+  background-size: cover;
+
+  @include media-medium {
+    background-position: center top;
   }
 }
 
