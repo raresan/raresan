@@ -168,15 +168,10 @@ a {
   transition: 0.3s ease-in-out;
   transition-property: color;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   padding: 2rem 0;
   font-weight: 300;
-}
-@media screen and (min-width: 768px) {
-  .menu-nav__link {
-    font-size: 1.5rem;
-  }
 }
 .menu-nav__link:hover {
   color: #939eeb;
@@ -207,7 +202,7 @@ a {
 }
 
 .footer__copyright {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 .footer.footer--rotate .footer__copyright {
   transform: rotate(-90deg) translateY(1rem);
@@ -309,24 +304,11 @@ a {
 .about__bio {
   width: 66vw;
   margin: 0 auto;
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
   .about__bio {
-    font-size: 1.5rem;
     width: 60vw;
-  }
-}
-
-.about__title {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 1;
-  color: #939eeb;
-}
-@media screen and (min-width: 768px) {
-  .about__title {
-    font-size: 6rem;
   }
 }
 
@@ -356,7 +338,7 @@ a {
 
 .jobs__duration {
   color: #939eeb;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .jobs__company,
@@ -366,12 +348,12 @@ a {
 }
 
 .jobs__company {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .jobs__role,
 .jobs__description {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .projects {
@@ -380,26 +362,6 @@ a {
 @media screen and (min-width: 768px) {
   .projects {
     padding-top: 12rem;
-  }
-}
-
-.projects__title {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 1;
-  color: #939eeb;
-  width: 66vw;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .projects__title {
-    font-size: 6rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .projects__title {
-    width: 60vw;
   }
 }
 
@@ -518,7 +480,7 @@ a {
 }
 
 .projects__description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-left: 1.2rem;
   list-style-type: square;
 }
@@ -542,7 +504,7 @@ a {
 }
 
 .projects__button {
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: 0.3s ease-in-out;
   transition-property: color;
   color: #939eeb;
@@ -575,28 +537,6 @@ a {
   }
 }
 
-.contact__title {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 1;
-  color: #939eeb;
-  width: 66vw;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .contact__title {
-    font-size: 6rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contact__title {
-    width: 60vw;
-  }
-}
-
 .contact__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -617,6 +557,6 @@ a {
 }
 
 .contact__link {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #939eeb;
 }/*# sourceMappingURL=main.css.map */

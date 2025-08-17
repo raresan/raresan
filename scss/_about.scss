@@ -13,15 +13,11 @@
 .about__bio {
   width: 66vw;
   margin: 0 auto;
+  font-size: 1rem;
 
   @include media-medium {
-    font-size: 1.5rem;
     width: 60vw;
   }
-}
-
-.about__title {
-  @include title;
 }
 
 .jobs {
@@ -48,7 +44,7 @@
 
 .jobs__duration {
   color: $secondary-color;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .jobs__company,
@@ -58,7 +54,7 @@
 }
 
 .jobs__company {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .jobs__role,

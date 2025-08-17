@@ -6,17 +6,6 @@
   }
 }
 
-.projects__title {
-  @include title;
-
-  width: 66vw;
-  margin: 0 auto;
-
-  @include media-medium {
-    width: 60vw;
-  }
-}
-
 .projects__items {
   width: 66vw;
   margin: 5rem auto 0;

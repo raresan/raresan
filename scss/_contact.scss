@@ -9,20 +9,6 @@
   }
 }
 
-.contact__title {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-
-  @include title;
-
-  width: 66vw;
-  margin: 0 auto;
-
-  @include media-medium {
-    width: 60vw;
-  }
-}
-
 .contact__list {
   display: grid;
   grid-template-columns: 1fr;
