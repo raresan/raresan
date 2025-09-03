@@ -17,18 +17,18 @@
   }
 }
 
-@mixin background-image {
-  background: url(../images/renan-bg02.png) 177% top;
-  background-size: cover;
-
-  @include media-medium {
-    background-position: center top;
-  }
-}
-
 @mixin media-large {
   @media screen and (min-width: 1024px) {
     @content;
+  }
+}
+
+@mixin background-image {
+  background: url(../images/renan-bg03.png) 30%;
+  background-size: cover;
+
+  @include media-large {
+    background-position: center;
   }
 }
 

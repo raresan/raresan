@@ -239,7 +239,7 @@ a {
 }
 
 .home {
-  background: url(../images/renan-bg02.png) 177% top;
+  background: url(../images/renan-bg03.png) 30%;
   background-size: cover;
   height: 100%;
   overflow: hidden;
@@ -250,12 +250,12 @@ a {
   padding: 8rem 1rem 0;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .home {
-    background-position: center top;
+    background-position: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .home {
     padding: 4rem 0 0 45vw;
     text-align: left;
@@ -472,6 +472,7 @@ a {
 .projects__project-title {
   color: #939eeb;
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 1600px) {
   .projects__project-title {

@@ -114,6 +114,7 @@
 .projects__project-title {
   color: $secondary-color;
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 
   @include media-extra-large {
     color: set-text-color($secondary-color);
