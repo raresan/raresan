@@ -6,10 +6,6 @@
   }
 }
 
-.about__bio-text {
-  margin-top: 3rem;
-}
-
 .about__bio {
   width: 66vw;
   margin: 0 auto;
@@ -18,6 +14,14 @@
   @include media-medium {
     width: 60vw;
   }
+}
+
+.about__bio-title {
+  @include title;
+}
+
+.about__bio-text {
+  margin-top: 3rem;
 }
 
 .jobs {

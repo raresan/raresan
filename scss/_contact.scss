@@ -9,17 +9,26 @@
   }
 }
 
+.contact__container {
+  width: 66vw;
+  margin: 0 auto;
+  font-size: 1rem;
+
+  @include media-medium {
+    width: 60vw;
+  }
+}
+
+.contact__title {
+  @include title;
+}
+
 .contact__list {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
   font-size: 1.5rem;
-  width: 66vw;
-  margin: 5rem auto 0;
-
-  @include media-medium {
-    width: 60vw;
-  }
+  margin-top: 3rem;
 
   @include media-extra-large {
     grid-template-columns: repeat(3, 1fr);
