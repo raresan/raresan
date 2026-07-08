@@ -8,24 +8,27 @@
 
     <link rel="icon" type="image/x-icon" href="../images/gamepad-solid.svg" />
 
-    <meta property="og:title" content="Renan Alonso Projects" />
+    <meta property="og:title" content="Bruno Engenheiro Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Renan Alonso Projects" />
-    <meta property="og:url" content="https://raresan.vercel.app/projects" />
+    <meta property="og:description" content="Bruno Engenheiro Portfolio" />
+    <meta
+      property="og:url"
+      content="https://raresan.vercel.app/projects/brunoeng.html"
+    />
     <meta
       property="og:image"
       content="https://raresan.vercel.app/images/renan-bg03.jpg"
     />
 
-    <meta name="twitter:title" content="Renan Alonso Projects" />
-    <meta name="twitter:description" content="Renan Alonso Projects" />
+    <meta name="twitter:title" content="Bruno Engenheiro Portfolio" />
+    <meta name="twitter:description" content="Bruno Engenheiro Portfolio" />
     <meta
       name="twitter:image"
       content="https://raresan.vercel.app/images/renan-bg03.jpg"
     />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <title>Renan Alonso Projects</title>
+    <title>Bruno Engenheiro Portfolio</title>
   </head>
   <body>
     <header class="menu">
@@ -53,37 +56,57 @@
 
     <main class="main">
       <section class="projects">
-        <div class="projects__container">
-          <h1 class="projects__title">Projects</h1>
+        <div class="projects__items">
+          <div class="projects__item">
+            <h2 class="projects__title">Bruno Engenheiro Portfolio</h2>
 
-          <div class="projects__grid">
-            <a href="nabilis.html" class="projects__grid-item"
-              ><img
-                src="../images/projects/thumb-nabilis.png"
-                alt="Nabilis"
-                class="projects__grid-item--image"
-            /></a>
+            <video
+              class="projects__video--mobile"
+              autoplay
+              loop
+              muted
+              src="../videos/bhs-portfolio-mobile.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
 
-            <a href="pokemonteambuilder.html" class="projects__grid-item"
-              ><img
-                src="../images/projects/thumb-pokemonteambuilder.png"
-                alt="Ultimate Pokemon Team Builder"
-                class="projects__grid-item--image"
-            /></a>
+            <video
+              class="projects__video--desktop"
+              autoplay
+              loop
+              muted
+              src="../videos/bhs-portfolio-desktop.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
 
-            <a href="brunoeng.html" class="projects__grid-item"
-              ><img
-                src="../images/projects/thumb-brunoeng.png"
-                alt="Bruno Engenheiro Portfolio"
-                class="projects__grid-item--image"
-            /></a>
+            <div class="projects__content">
+              <ul class="projects__description">
+                <li>Used NextJs, React with TypeScript and SASS;</li>
+                <li>Applied Sanity CMS;</li>
+                <li>Full responsive (Mobile First);</li>
+                <li>Website Design based on an existing template;</li>
+                <li>Versioning flow via Git / GitHub.</li>
+              </ul>
 
-            <a href="starwarsplanet.html" class="projects__grid-item"
-              ><img
-                src="../images/projects/thumb-starwarsplanet.png"
-                alt="Your Star Wars Planet"
-                class="projects__grid-item--image"
-            /></a>
+              <div class="projects__buttons">
+                <a
+                  href="https://brunoeng.vercel.app/"
+                  class="projects__button"
+                  target="_blank"
+                >
+                  <i class="fas fa-eye"></i> Website URL
+                </a>
+
+                <a
+                  href="https://github.com/raresan/brunoeng"
+                  class="projects__button"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> GitHub repository
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
