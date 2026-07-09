@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../scss/main.css" />
+
+    <link rel="icon" type="image/x-icon" href="../images/gamepad-solid.svg" />
+
+    <meta property="og:title" content="Spotlight" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Spotlight" />
+    <meta
+      property="og:url"
+      content="https://raresan.vercel.app/projects/spotlight.html"
+    />
+    <meta
+      property="og:image"
+      content="https://raresan.vercel.app/images/renan-bg03.jpg"
+    />
+
+    <meta name="twitter:title" content="Spotlight" />
+    <meta name="twitter:description" content="Spotlight" />
+    <meta
+      name="twitter:image"
+      content="https://raresan.vercel.app/images/renan-bg03.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Spotlight</title>
+  </head>
+  <body>
+    <header class="menu">
+      <div class="menu-button">
+        <span class="menu-button__burger"></span>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="../index.html" class="menu-nav__link">Home</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="../about.html" class="menu-nav__link">About</a>
+          </li>
+          <li class="menu-nav__item active">
+            <a href="../projects" class="menu-nav__link">Projects</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="../contact.html" class="menu-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="projects">
+        <div class="projects__items">
+          <div class="projects__item">
+            <h2 class="projects__title">Spotlight</h2>
+
+            <video
+              class="projects__video--mobile"
+              autoplay
+              loop
+              muted
+              src="../videos/spotlight-mobile.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+
+            <video
+              class="projects__video--desktop"
+              autoplay
+              loop
+              muted
+              src="../videos/spotlight-desktop.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="projects__content">
+              <ul class="projects__description">
+                <li>
+                  Implemented page designs and reusable components using
+                  React.js and Next.js;
+                </li>
+                <li>
+                  Developed application logic and interactive UI behaviors based
+                  on design specifications;
+                </li>
+                <li>
+                  Built responsive interfaces with Tailwind CSS, ensuring
+                  consistency across devices;
+                </li>
+                <li>
+                  Created animations and transitions using Motion to enhance
+                  user engagement and navigation flow.
+                </li>
+              </ul>
+
+              <div class="projects__buttons">
+                <a
+                  href="https://spotlight-io.com/"
+                  class="projects__button"
+                  target="_blank"
+                >
+                  <i class="fas fa-eye"></i> Website URL
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer footer--rotate">
+          <span class="footer__copyright"
+            >&copy; Copyright
+            <script>
+              document.write(new Date().getFullYear())
+            </script></span
+          >
+
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/raresan/"
+              class="social-icons__link"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a
+              href="https://github.com/raresan"
+              class="social-icons__link"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a
+              href="https://wa.me/5511983293013"
+              class="social-icons__link"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/b27c44bf74.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
